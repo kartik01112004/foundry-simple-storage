@@ -66,5 +66,16 @@ $ cast --help
 ```
 
 `forge create SimpleStorage --interactive `
+
 and then pass the private key
 this will deploy our contract on local anvil chain if you want to add another chain you must paasss rpc-url and priavte key to an acoount on that chain
+
+.s.sol - is a convention to tell that its a script
+
+```bash
+forge script script/DeploySimpleStorage.s.sol --rpc-url http://127.0.0.1:8545 --broadcast
+--private-key 0x00000000000000000000000000000000000000000000000000000000000000
+000
+```
+
+this is how we deploy on anvil local chain
