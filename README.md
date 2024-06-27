@@ -79,3 +79,9 @@ forge script script/DeploySimpleStorage.s.sol --rpc-url http://127.0.0.1:8545 --
 ```
 
 this is how we deploy on anvil local chain
+
+# Never use .env
+
+erc2335
+
+## thirdweb deploy
