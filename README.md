@@ -85,3 +85,43 @@ this is how we deploy on anvil local chain
 erc2335
 
 ## thirdweb deploy
+
+## zkSync CLI
+
+needs : node, npm, npx docker, zksync
+
+```bash
+# start foundry zksync
+foundryup-zksync
+
+# Start docker and check if running by
+docker --version
+
+# configure the dev cli you will be using
+npx zksync-cli dev config
+
+# start the docker container
+npx zksync-cli dev start
+
+# check of docker process running
+docker ps
+
+# Output looks like
+
+#CONTAINER ID   IMAGE                         COMMAND               CREATED      STATUS          PORTS                    NAMES
+#ff3d5a0e448c   zkcli-in-memory-node-zksync   "era_test_node run"   7 days ago   Up 22 seconds   0.0.0.0:8011->8011/tcp   zkcli-in-memory-node-zksync-1
+
+```
+
+## deploy localy
+
+```bash
+forge create src/SimpleStorage.sol:SimpleStorage --rpc-url http://127.0.0.1:8011 --private-key 0 --legacy --zksync
+```
+
+## types of transactions
+
+## why deploy on L2
+
+its too much pricy to use ethurium directly so we use L2 
+
